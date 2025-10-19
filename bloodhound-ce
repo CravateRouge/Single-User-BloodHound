@@ -101,7 +101,7 @@ function install_gds_plugin() {
 		
 		if [ ! -f "$PLUGINS_DIR/$GDS_JAR" ]; then
 			echo "Downloading Neo4j GDS plugin version ${GDS_VERSION}..."
-			local download_status=1
+			local download_status
 			if command -v curl >/dev/null 2>&1; then
 				curl -fsSL -o "$PLUGINS_DIR/$GDS_JAR" "$GDS_URL"
 				download_status=$?
